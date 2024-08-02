@@ -1,0 +1,142 @@
+/* Tổng thể */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    min-height: 50vh;
+  }
+  
+  #product-container {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Khoảng cách giữa các thẻ sản phẩm */
+    justify-content: center; /* Căn giữa các sản phẩm */
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước tổng thể */
+    padding: 15px;
+    text-align: center;
+    width: 300px; 
+    display: flex;
+    flex-direction: column;
+    min-height: 400px; 
+    overflow: hidden; /* Đảm bảo rằng nội dung không tràn ra ngoài khung */
+  }
+  
+  .product-image {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng và không bị che khuất */
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .product-details {
+    padding: 10px;
+  }
+  
+  .product-name {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-price {
+    font-size: 16px;
+    color: #333;
+    margin: 5px 0;
+  }
+  
+  .product-stock {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+  }
+  
+  button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  /* Nút thêm vào giỏ với gradient hồng tím pastel */
+  .product-card button {
+    background: linear-gradient(45deg, #e5a6c8, #b38cb5); /* Gradient hồng tím pastel */
+  }
+  
+  .product-card button:hover {
+    background: linear-gradient(45deg, #d89cb4, #a980a6); /* Gradient tối hơn khi hover */
+  }
+  
+  /* Nút xóa trong giỏ hàng với gradient đỏ pastel */
+  .remove-button {
+    background: linear-gradient(45deg, #f9a1a6, #f76c6c); /* Gradient đỏ pastel */
+  }
+  
+  .remove-button:hover {
+    background: linear-gradient(45deg, #f77a7a, #f56f6f); /* Gradient tối hơn khi hover */
+  }
+  
+  #cart-container {
+    width: 25%;
+    position: sticky;
+    top: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .cart-item-info {
+    flex: 1;
+    margin-left: 10px;
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng và không bị che khuất */
+    border-radius: 8px;
+  }
+  
+  .cart-item-name, .cart-item-price, .cart-item-quantity {
+    margin: 0;
+  }
+  
+  .total-price {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  h1 {margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(135deg, #dd1919, #66199d,#f80b5e); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
+}
